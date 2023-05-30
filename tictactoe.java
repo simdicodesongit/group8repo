@@ -70,3 +70,21 @@ System.out.println("| " + gameBoard[0] + " | " + gameBoard[1] + " | " + gameBoar
 System.out.println("| " + gameBoard[3] + " | " + gameBoard[4] + " | " + gameBoard[5] + " |");
 System.out.println("| " + gameBoard[6] + " | " + gameBoard[7] + " | " + gameBoard[8] + " |");
 System.out.println("#############");
+
+    }
+
+public static void main(String[] args) {
+
+    winner = null;
+    player = "X";
+    gameBoard = new String[9];
+
+    for(int i=0; i<9; i++){
+        gameBoard[i] = String.valueOf(i+1);
+    }
+
+    showBoard();
+
+    System.out.println("Its X Chance: ");
+
+    Scanner sc = new Scanner(System.in);
