@@ -39,4 +39,34 @@ public class TicTacToe {
                 case 7: check = gameBoard[2] + gameBoard[4] + gameBoard[6];
                         break;
 
-       
+       }
+
+if(check.equals("XXX"))
+    return "X";
+else if (check.equals("OOO"))
+    return "O";
+
+}
+
+for (int i=0; i<9; i++){
+
+if(Arrays.asList(gameBoard).contains(String.valueOf(i+1)))
+    break;
+else if(i == 8)
+    return "Tie";
+
+}
+
+System.out.println("Its " + player + " Chance:");
+
+return null;
+
+}
+
+public static void showBoard(){
+
+System.out.println("#############");
+System.out.println("| " + gameBoard[0] + " | " + gameBoard[1] + " | " + gameBoard[2] + " |");
+System.out.println("| " + gameBoard[3] + " | " + gameBoard[4] + " | " + gameBoard[5] + " |");
+System.out.println("| " + gameBoard[6] + " | " + gameBoard[7] + " | " + gameBoard[8] + " |");
+System.out.println("#############");
